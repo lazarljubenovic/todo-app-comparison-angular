@@ -5,7 +5,7 @@ Framework: Angular 6.1.4.
 ## Build instructions
 
 ```bash
-$ yarn build --prod
+$ yarn build
 ```
 
 ## Results
