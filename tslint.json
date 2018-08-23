@@ -10,7 +10,10 @@
       true,
       "check-space"
     ],
-    "curly": true,
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
     "deprecation": {
       "severity": "warn"
     },
@@ -59,10 +62,7 @@
     "no-empty": false,
     "no-empty-interface": true,
     "no-eval": true,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
+    "no-inferrable-types": false,
     "no-misused-new": true,
     "no-non-null-assertion": true,
     "no-shadowed-variable": true,
@@ -90,12 +90,9 @@
     "radix": true,
     "semicolon": [
       true,
-      "always"
+      "never"
     ],
-    "triple-equals": [
-      true,
-      "allow-null-check"
-    ],
+    "triple-equals": false,
     "typedef-whitespace": [
       true,
       {

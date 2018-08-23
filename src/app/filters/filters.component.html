@@ -1,0 +1,3 @@
+<button type="button" [class]="isSelectedAll" (click)="filterChange.emit('all')">All</button>
+<button type="button" [class]="isSelectedComplete" (click)="filterChange.emit('complete')">Complete</button>
+<button type="button" [class]="isSelectedIncomplete" (click)="filterChange.emit('incomplete')">Incomplete</button>

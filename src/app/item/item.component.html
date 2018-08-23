@@ -1,0 +1,11 @@
+<w-edit-item
+  *ngIf="isEditMode"
+  [item]="item"
+  (submit)="onEditSubmit($event)"
+></w-edit-item>
+
+<div *ngIf="!isEditMode" [class]="className">
+  <span>{{ item.text }}</span>
+  <button (click)="toggle.emit()">{{ toggleText }}</button>
+  <button (click)="onEditClick()" *ngIf="!item.isCompleted">Edit</button>
+</div>

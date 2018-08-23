@@ -1,0 +1,24 @@
+<p *ngIf="isEmpty" class="empty">
+  The list is empty.
+</p>
+
+<ng-container *ngIf="!isEmpty">
+  <ng-container *ngIf="!isItemsEmpty">
+    <ol>
+      <li *ngFor="let item of items; trackBy: trackById">
+        <w-item
+          [item]="item"
+          (toggle)="toggle.emit(item.id)"
+          (edit)="edit.emit($event)"
+        ></w-item>
+      </li>
+    </ol>
+  </ng-container>
+
+  <p *ngIf="isItemsEmpty" class="empty">
+    No items to show for this filter.<br>
+    There are {{ totalItemsCount }} items in total.
+  </p>
+</ng-container>
+
+<w-item-creator (add)="add.emit($event)"></w-item-creator>

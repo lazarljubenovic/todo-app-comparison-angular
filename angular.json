@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "w",
       "schematics": {},
       "architect": {
         "build": {
@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "todo-app-comparison-angular"
+  "defaultProject": "todo-app-comparison-angular",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
